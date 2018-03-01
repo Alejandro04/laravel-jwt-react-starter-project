@@ -5,11 +5,11 @@ Boilerplate for reactjs (15.6) and laravel (5.5) with jwt-authentication.  0
 1. Rename .env.example to .env
 2. Update DB_HOST, DB_DATABASE, DB_USERNAME, DB_PASSWORD, and Social IDs in .env file to yours.
 3. In command line : 
-   - composer update
-   - Php artisan key:generate
+   - composer install
+   - php artisan key:generate
    - php artisan migrate
-4. npm install
-5. npm run dev
+4. yarn install
+5. yarn run dev
 
 # features:
 This repository already configured with:

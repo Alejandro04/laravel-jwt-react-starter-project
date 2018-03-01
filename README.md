@@ -24,7 +24,3 @@ This repository already configured with:
 - Forgot password => Done
 - Limit login attempts
 - social login => Done (Facebook, Twitter, LinkedIn, Google)
-
-This project is open for contribution.
-
-For any suggestion and query contact me at : sumityadavbadli@gmail.com

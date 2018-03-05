@@ -13,7 +13,7 @@ Skeleton for reactjs and laravel with jwt-authentication.
 # features:
 This repository already configured with:
 - Redux https://www.npmjs.com/package/redux-persist
-- Socialite (https://laravel.com/docs/5.5/socialite)
+- Socialite https://laravel.com/docs/5.5/socialite
 - UI React https://react.semantic-ui.com/introduction
 - Animate css https://daneden.github.io/animate.css/
 

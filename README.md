@@ -1,5 +1,5 @@
 # react-laravel-with-jwt-authentication
-Boilerplate for reactjs (15.6) and laravel (5.5) with jwt-authentication.  0 
+Skeleton for reactjs and laravel with jwt-authentication.
 
 # usage :
 1. Rename .env.example to .env
@@ -22,5 +22,4 @@ This repository already configured with:
 - User registration => Done
 - User login  => Done
 - Forgot password => Done
-- Limit login attempts
 - social login => Done (Facebook, Twitter, LinkedIn, Google)

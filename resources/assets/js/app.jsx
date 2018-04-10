@@ -7,10 +7,17 @@
 
 require('./bootstrap');
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom'
+import {Provider} from 'react-redux'
+import store from './store'
 import Router from './routes/routes'
+import * as action from './store/actions'
+
+store.dispatch(action.authCheck());
  
-ReactDOM.render(
-  <Router/>,
+render(
+  <Provider store={store}>
+      <Routes/>
+  </Provider>,
   document.getElementById('root-react')
 );

@@ -1,21 +1,67 @@
-import React from 'react'
-import {
-  Route,
-  NavLink,
-  HashRouter,
-} from "react-router-dom";
 
-import Layout from '../components/Layout'
-import Example2 from '../components/Example2'
-import Example3 from '../components/Example3'
+/*
+import Home from '../pages/home'
+import Login from '../pages/login'
+import Register from '../pages/register'
+import ForgotPassword from '../pages/forgotPassword'
+import ResetPassword from '../pages/resetPassword'
+import Dashboard from '../pages/dashboard'
+import NoMatch from '../pages/noMatch'
+*/
 
-const Routes= () =>
-<HashRouter>
-    <div>
-        <Route path="/" component={Layout}/>
-        <Route path="/example2" component={Example2}/>
-        <Route path="/example3" component={Example3}/>
-    </div>
-</HashRouter>
+import example2 from '../components/example2'
 
-export default Routes
+const routes = [
+    {
+        path: '/example2',
+        exact: true,
+        auth: true,
+        component: example2
+    },
+    /*
+    {
+        path: '/login/:social',
+        exact: false,
+        auth: false,
+        component: Home
+    },
+    {
+        path: '/login',
+        exact: true,
+        auth: false,
+        component: Login
+    },
+    {
+        path: '/register',
+        exact: true,
+        auth: false,
+        component: Register
+    },
+    {
+        path: '/forgot-password',
+        exact: true,
+        auth: false,
+        component: ForgotPassword
+    },
+    {
+        path: '/reset-password/:token/:email',
+        exact: true,
+        auth: false,
+        component: ResetPassword
+    },
+    {
+        path: '/dashboard',
+        exact: true,
+        auth: true,
+        component: Dashboard
+    },
+    {
+        path: '',
+        exact: true,
+        auth: false,
+        component: NoMatch
+    }
+    */
+];
+
+export default routes;

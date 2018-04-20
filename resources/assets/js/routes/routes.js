@@ -10,6 +10,8 @@ import NoMatch from '../pages/noMatch'
 */
 
 import example2 from '../components/example2'
+import Login from '../components/login'
+import Register from '../components/register'
 
 const routes = [
     {
@@ -25,6 +27,7 @@ const routes = [
         auth: false,
         component: Home
     },
+    */
     {
         path: '/login',
         exact: true,
@@ -37,6 +40,7 @@ const routes = [
         auth: false,
         component: Register
     },
+    /*
     {
         path: '/forgot-password',
         exact: true,

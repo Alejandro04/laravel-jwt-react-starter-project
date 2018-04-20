@@ -6,9 +6,14 @@ import {BrowserRouter as Router,
 import routes from './routes'
 import PublicRoute from './Public'
 import PrivateRoute from './Private'
+import {
+    Route,
+    NavLink,
+    HashRouter
+  } from "react-router-dom";
 
 const Routes = () => (
-    <Router>
+    <HashRouter>
         <Switch>
             {routes.map((route,i) => {
                 if(route.auth){
@@ -18,7 +23,7 @@ const Routes = () => (
                 }
             })}
         </Switch>
-    </Router>
+    </HashRouter>
 );
 
 export default Routes;

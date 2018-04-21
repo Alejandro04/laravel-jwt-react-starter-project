@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux';
 
 export default class login extends React.Component {
    render() {

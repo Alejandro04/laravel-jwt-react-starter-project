@@ -1,5 +1,4 @@
-import React from 'react'
-import axios from 'axios';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import AuthService from '../../services';

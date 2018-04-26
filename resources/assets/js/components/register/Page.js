@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import AuthService from '../../services';
 import {Validator} from 'ree-validate';
+import Navigation from '../../common/navigation'
 
 class Page extends React.Component {
 
@@ -95,39 +95,42 @@ class Page extends React.Component {
 
    render() {
         if (this.props.isAuthenticated) {
-            return <Redirect to='/' replace/>
+            return <Redirect to='/dashboard' replace/>
         }
         const {errors} = this.state;
 
         return(
-            <div className="container">
-                <h2 className="pageTitle">Register</h2>
-                <div className="row form">
-                    <form className="col s12" onSubmit={this.handleSubmit}>
-                    <div className="row">
-                        <div className="input-field col s6">
-                            <input name="name" value={this.state.name} type="text" className="validate" onChange={this.handleChange}/>
-                            <label for="name">Name</label>
+            <div>
+                <Navigation/>
+                <div className="container">
+                    <h2 className="pageTitle">Register</h2>
+                    <div className="row form">
+                        <form className="col s12" onSubmit={this.handleSubmit}>
+                        <div className="row">
+                            <div className="input-field col s6">
+                                <input name="name" value={this.state.name} type="text" className="validate" onChange={this.handleChange}/>
+                                <label for="name">Name</label>
+                            </div>
                         </div>
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="password" name="password" type="password" className="validate" value={this.state.password} onChange={this.handleChange}/>
+                                <label for="password">Password</label>
+                            </div>
+                            <div className="input-field col s12">
+                                <input id="password" name="password_confirmation" type="password" className="validate" value={this.state.password_confirmation} onChange={this.handleChange}/>
+                                <label for="password">Password Confirmation</label>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="input-field col s12">
+                                <input id="email" name="email" type="email" className="validate" value={this.state.email} onChange={this.handleChange}/>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>            
+                        <input type="submit" value="Registrar" className="btn btn-info" />
+                        </form>
                     </div>
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <input id="password" name="password" type="password" className="validate" value={this.state.password} onChange={this.handleChange}/>
-                            <label for="password">Password</label>
-                        </div>
-                        <div className="input-field col s12">
-                            <input id="password" name="password_confirmation" type="password" className="validate" value={this.state.password_confirmation} onChange={this.handleChange}/>
-                            <label for="password">Password Confirmation</label>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="input-field col s12">
-                            <input id="email" name="email" type="email" className="validate" value={this.state.email} onChange={this.handleChange}/>
-                            <label for="email">Email</label>
-                        </div>
-                    </div>            
-                    <input type="submit" value="Registrar" className="btn btn-info" />
-                    </form>
                 </div>
             </div>
         )

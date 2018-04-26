@@ -9,17 +9,11 @@ import Dashboard from '../pages/dashboard'
 import NoMatch from '../pages/noMatch'
 */
 
-import example2 from '../components/example2'
 import Login from '../components/login'
 import Register from '../components/register'
+import Dashboard from '../common/dashboard'
 
 const routes = [
-    {
-        path: '/example2',
-        exact: true,
-        auth: true,
-        component: example2
-    },
     /*
     {
         path: '/login/:social',
@@ -30,13 +24,13 @@ const routes = [
     */
     {
         path: '/login',
-        exact: true,
+        exact: false,
         auth: false,
         component: Login
     },
     {
         path: '/register',
-        exact: true,
+        exact: false,
         auth: false,
         component: Register
     },
@@ -53,12 +47,14 @@ const routes = [
         auth: false,
         component: ResetPassword
     },
+    */
     {
         path: '/dashboard',
         exact: true,
         auth: true,
         component: Dashboard
     },
+    /*
     {
         path: '',
         exact: true,

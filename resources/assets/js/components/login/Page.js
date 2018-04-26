@@ -1,9 +1,8 @@
 import React from 'react'
-import axios from 'axios';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import AuthService from '../../services';
 import {Validator} from 'ree-validate';
+import Navigation from '../../common/navigation'
 
 
 class Page extends React.Component {
@@ -76,7 +75,7 @@ submit(credentials) {
 }
 
 onSocialClick(event, data) {
-   window.location.assign(`redirect/${data.as}`);
+  // window.location.assign(`redirect/${data.as}`);
 }
 
 componentDidMount(){
@@ -86,7 +85,7 @@ componentDidMount(){
 }
 
     render() {
-        const { from } = this.props.location.state || { from: { pathname: '/' } };
+        const { from } = this.props.location.state || { from: { pathname: '/dashboard' } };
         const { isAuthenticated } = this.props;
 
         if (isAuthenticated) {
@@ -97,25 +96,28 @@ componentDidMount(){
         const {errors} = this.state;
 
         return(
-         <div className="container">
-             <h2 className="pageTitle">Login</h2>
-             <div className="row form">
-                 <form className="col s12" onSubmit={this.handleSubmit}>
-                 <div className="row">
-                     <div className="input-field col s12">
-                     <input id="email" type="email" className="validate" name="email" value={this.state.email} onChange={this.handleChange}/>
-                     <label for="email">Email</label>
-                     </div>
-                 </div>
-                 <div className="row">
-                     <div className="input-field col s12">
-                     <input id="password" type="password" className="validate" name="password" value={this.state.password}  onChange={this.handleChange}/>
-                     <label for="password">Password</label>
-                     </div>
-                 </div>
-                 <input type="submit" value="Iniciar Sesion" className="btn btn-info" onClick={this.handleSubmit} />
-                 </form>
-             </div>
+        <div>
+            <Navigation/>
+            <div className="container">
+                <h2 className="pageTitle">Login</h2>
+                <div className="row form">
+                    <form className="col s12" onSubmit={this.handleSubmit}>
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <input id="email" type="email" className="validate" name="email" value={this.state.email} onChange={this.handleChange}/>
+                        <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="input-field col s12">
+                        <input id="password" type="password" className="validate" name="password" value={this.state.password}  onChange={this.handleChange}/>
+                        <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Iniciar Sesion" className="btn btn-info" onClick={this.handleSubmit} />
+                    </form>
+                </div>
+            </div>
          </div>
         )
     }

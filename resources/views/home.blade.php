@@ -40,11 +40,11 @@
         <script src="{{ asset('js/app.js') }}"></script>
 
         <!-- Import jQuery before materialize.js -->
-        <script src="./theme/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
         <!-- plugins:js -->
         <script src="./theme/node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="./theme/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="./theme/node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
         <!-- endinject -->
         <!-- Plugin js for this page-->

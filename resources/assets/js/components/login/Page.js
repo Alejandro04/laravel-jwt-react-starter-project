@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import AuthService from '../../services';
 import {Validator} from 'ree-validate';
+import { Redirect } from 'react-router';
 
 
 class Page extends React.Component {
@@ -76,7 +77,7 @@ submit(credentials) {
 }
 
 onSocialClick(event, data) {
-   window.location.assign(`redirect/${data.as}`);
+  // window.location.assign(`redirect/${data.as}`);
 }
 
 componentDidMount(){

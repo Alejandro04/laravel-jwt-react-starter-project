@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AuthService from '../../services';
 import {Validator} from 'ree-validate';
-import Navigation from '../../common/navigation'
+import Navigation from '../../common/navigation';
+import { Redirect } from 'react-router';
 
 class Page extends React.Component {
 

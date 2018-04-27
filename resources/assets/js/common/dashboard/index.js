@@ -7,7 +7,7 @@ import Footer from './footer'
 export default class Dashboard extends React.Component {
    render() {
        return(
-            <div classNameName="container-scroller">
+            <div className="container-scroller">
                 <Menuheader/>       
                 <div className="container-fluid page-body-wrapper">
                     <div className="row row-offcanvas row-offcanvas-right">

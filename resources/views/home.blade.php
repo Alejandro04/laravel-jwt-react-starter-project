@@ -21,8 +21,6 @@
         <link rel="stylesheet" href="./theme/node_modules/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" href="./theme/node_modules/jquery-bar-rating/dist/themes/fontawesome-stars.css" />
         <!-- End plugin css for this page -->
-        <!-- inject:css -->
-        <link rel="stylesheet" href="./theme/css/style.css" />
         <!-- endinject -->
         <link rel="shortcut icon" href="./theme/images/favicon.png" />
         
